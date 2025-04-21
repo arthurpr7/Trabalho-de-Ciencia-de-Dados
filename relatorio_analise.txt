@@ -1,0 +1,527 @@
+RELATÓRIO DE ANÁLISE DE VENDAS
+============================================================
+
+PRÉ-REQUISITOS E BIBLIOTECAS UTILIZADAS:
+- pandas
+- matplotlib
+- mlxtend
+
+Instalação recomendada:
+pip install pandas mlxtend matplotlib
+
+============================================================
+ REGRAS DE ASSOCIAÇÃO COM MAIOR LIFT (TOP 10)
+============================================================
+                               Se tiver ➜   Então também ➜  Suporte  Confiança  Lift
+               cerveja, papel toalha, sal  papel higienico   0.0007     0.2692  3.15
+            cerveja, detergente, macarrao queijo mussarela   0.0006     0.3750  2.91
+             detergente, feijao, manteiga     oleo de soja   0.0006     0.4000  2.89
+       papel higienico, papel toalha, sal          cerveja   0.0007     0.3182  2.69
+       detergente, manteiga, oleo de soja           feijao   0.0006     0.2400  2.52
+         cafe, presunto, queijo mussarela    condicionador   0.0005     0.2941  2.51
+   detergente, macarrao, queijo mussarela          cerveja   0.0006     0.2857  2.42
+                     carvao, oleo de soja     agua mineral   0.0008     0.3478  2.38
+biscoito recheado, pao de forma, sabonete              sal   0.0008     0.3333  2.36
+              agua mineral, manteiga, sal          shampoo   0.0006     0.2308  2.33
+
+============================================================
+ TOP 10 PRODUTOS MAIS VENDIDOS
+============================================================
+        produto  quantidade_vendida
+ pasta de dente                3942
+       sabonete                3653
+         acucar                3443
+           cafe                3242
+       manteiga                3101
+   papel toalha                2962
+   desinfetante                2781
+molho de tomate                2039
+   agua mineral                1607
+     detergente                1594
+
+============================================================
+ TODAS AS REGRAS DE ASSOCIAÇÃO DE QUALIDADE
+============================================================
+                                                 Se tiver ➜    Então também ➜  Suporte  Confiança  Lift
+                                 cerveja, papel toalha, sal   papel higienico   0.0007     0.2692  3.15
+                              cerveja, detergente, macarrao  queijo mussarela   0.0006     0.3750  2.91
+                               detergente, feijao, manteiga      oleo de soja   0.0006     0.4000  2.89
+                         papel higienico, papel toalha, sal           cerveja   0.0007     0.3182  2.69
+                         detergente, manteiga, oleo de soja            feijao   0.0006     0.2400  2.52
+                           cafe, presunto, queijo mussarela     condicionador   0.0005     0.2941  2.51
+                     detergente, macarrao, queijo mussarela           cerveja   0.0006     0.2857  2.42
+                                       carvao, oleo de soja      agua mineral   0.0008     0.3478  2.38
+                  biscoito recheado, pao de forma, sabonete               sal   0.0008     0.3333  2.36
+                                agua mineral, manteiga, sal           shampoo   0.0006     0.2308  2.33
+                                       agua mineral, carvao      oleo de soja   0.0008     0.3077  2.23
+                   detergente, pao de forma, pasta de dente             arroz   0.0005     0.2083  2.17
+                           biscoito recheado, sabonete, sal      pao de forma   0.0008     0.2222  2.16
+            farinha de trigo, molho de tomate, pao de forma        detergente   0.0005     0.3125  2.15
+                                   carvao, queijo mussarela   suco de laranja   0.0005     0.2778  2.15
+                  biscoito recheado, macarrao, papel toalha  queijo mussarela   0.0008     0.2759  2.14
+                            acucar, detergente, sabao em po      agua mineral   0.0005     0.3125  2.14
+                                         cafe, sal, shampoo  farinha de trigo   0.0005     0.2941  2.13
+                   leite integral, macarrao, pasta de dente      oleo de soja   0.0005     0.2941  2.13
+                                   arroz, papel toalha, sal      desinfetante   0.0005     0.5000  2.07
+                        cerveja, macarrao, queijo mussarela        detergente   0.0006     0.3000  2.06
+                      cerveja, detergente, queijo mussarela          macarrao   0.0006     0.3000  2.05
+                                 agua mineral, sal, shampoo          manteiga   0.0006     0.5455  2.05
+                                feijao, pasta de dente, sal biscoito recheado   0.0005     0.2941  2.03
+              detergente, farinha de trigo, molho de tomate      pao de forma   0.0005     0.2083  2.03
+          biscoito recheado, papel toalha, queijo mussarela          macarrao   0.0008     0.2963  2.03
+                  condicionador, presunto, queijo mussarela              cafe   0.0005     0.5556  2.00
+                           acucar, detergente, pao de forma      agua mineral   0.0006     0.2857  1.95
+              biscoito recheado, macarrao, queijo mussarela      papel toalha   0.0008     0.5000  1.94
+                                    carvao, suco de laranja  queijo mussarela   0.0005     0.2500  1.94
+                 detergente, farinha de trigo, pao de forma   molho de tomate   0.0005     0.3571  1.93
+                  amaciante, farinha de trigo, papel toalha           cerveja   0.0005     0.2273  1.92
+                          acucar, agua mineral, sabao em po        detergente   0.0005     0.2778  1.91
+                              acucar, oleo de soja, shampoo  farinha de trigo   0.0005     0.2632  1.91
+                     cerveja, papel higienico, papel toalha               sal   0.0007     0.2692  1.90
+                 detergente, farinha de trigo, papel toalha           cerveja   0.0006     0.2222  1.88
+                  condicionador, desinfetante, refrigerante               sal   0.0005     0.2632  1.86
+                              cafe, condicionador, presunto  queijo mussarela   0.0005     0.2381  1.85
+                            agua mineral, manteiga, shampoo               sal   0.0006     0.2609  1.84
+                        amaciante, leite integral, manteiga    pasta de dente   0.0006     0.6000  1.82
+                              cerveja, papel higienico, sal      papel toalha   0.0007     0.4667  1.81
+                      detergente, papel higienico, sabonete      oleo de soja   0.0005     0.2500  1.81
+                             cafe, detergente, pao de forma   molho de tomate   0.0006     0.3333  1.80
+                  biscoito recheado, desinfetante, macarrao      agua mineral   0.0005     0.2632  1.80
+          farinha de trigo, papel higienico, pasta de dente      agua mineral   0.0005     0.2632  1.80
+                                    macarrao, presunto, sal              cafe   0.0005     0.5000  1.80
+                        farinha de trigo, manteiga, shampoo              cafe   0.0007     0.5000  1.80
+              agua mineral, biscoito recheado, refrigerante      papel toalha   0.0006     0.4615  1.79
+                   agua mineral, presunto, queijo mussarela          sabonete   0.0005     0.5556  1.78
+                               sabao em po, suco de laranja          macarrao   0.0013     0.2600  1.78
+                          acucar, biscoito recheado, feijao               sal   0.0005     0.2500  1.77
+                       cerveja, detergente, molho de tomate               sal   0.0005     0.2500  1.77
+                               acucar, cerveja, sabao em po      papel toalha   0.0005     0.4545  1.76
+                       amaciante, cerveja, farinha de trigo      papel toalha   0.0005     0.4545  1.76
+                            desinfetante, oleo de soja, sal  farinha de trigo   0.0006     0.2400  1.74
+                                 feijao, presunto, sabonete          manteiga   0.0006     0.4615  1.74
+                  amaciante, leite integral, pasta de dente          manteiga   0.0006     0.4615  1.74
+                      acucar, papel higienico, papel toalha           cerveja   0.0009     0.2045  1.73
+                                pao de forma, sabonete, sal biscoito recheado   0.0008     0.2500  1.73
+                            oleo de soja, sabonete, shampoo  farinha de trigo   0.0005     0.2381  1.73
+                              cafe, condicionador, presunto      oleo de soja   0.0005     0.2381  1.72
+                                  biscoito recheado, carvao      oleo de soja   0.0005     0.2381  1.72
+                             arroz, biscoito recheado, cafe          macarrao   0.0005     0.2500  1.71
+                         cerveja, papel toalha, sabao em po            acucar   0.0005     0.5000  1.71
+                            arroz, pasta de dente, presunto            acucar   0.0008     0.5000  1.71
+                            desinfetante, refrigerante, sal     condicionador   0.0005     0.2000  1.71
+                           detergente, molho de tomate, sal           cerveja   0.0005     0.2000  1.69
+                         arroz, condicionador, desinfetante    pasta de dente   0.0005     0.5556  1.69
+                      cerveja, detergente, farinha de trigo      papel toalha   0.0006     0.4286  1.66
+                           amaciante, cerveja, papel toalha  farinha de trigo   0.0005     0.2273  1.65
+                  detergente, molho de tomate, pao de forma  farinha de trigo   0.0005     0.2273  1.65
+                                      arroz, cafe, macarrao biscoito recheado   0.0005     0.2381  1.65
+             desinfetante, molho de tomate, papel higienico biscoito recheado   0.0005     0.2381  1.65
+                          cerveja, pasta de dente, presunto        detergente   0.0005     0.2381  1.64
+                              cerveja, molho de tomate, sal        detergente   0.0005     0.2381  1.64
+                    agua mineral, macarrao, suco de laranja              cafe   0.0005     0.4545  1.63
+            desinfetante, papel higienico, queijo mussarela              cafe   0.0005     0.4545  1.63
+                   queijo mussarela, refrigerante, sabonete               sal   0.0006     0.2308  1.63
+                                cafe, cerveja, pao de forma          macarrao   0.0005     0.2381  1.63
+                                                      vinho biscoito recheado   0.0008     0.2353  1.63
+                               acucar, sabao em po, shampoo          sabonete   0.0005     0.5000  1.60
+             farinha de trigo, leite integral, papel toalha          sabonete   0.0009     0.5000  1.60
+                           cerveja, feijao, suco de laranja          sabonete   0.0005     0.5000  1.60
+                                       cerveja, sabao em po          macarrao   0.0011     0.2340  1.60
+              biscoito recheado, desinfetante, pao de forma      papel toalha   0.0007     0.4118  1.60
+                                                carvao, sal   molho de tomate   0.0005     0.2941  1.59
+                                   cerveja, detergente, sal   molho de tomate   0.0005     0.2941  1.59
+                    manteiga, papel higienico, refrigerante   molho de tomate   0.0005     0.2941  1.59
+           biscoito recheado, desinfetante, papel higienico   molho de tomate   0.0005     0.2941  1.59
+                            desinfetante, papel toalha, sal  queijo mussarela   0.0008     0.2051  1.59
+           biscoito recheado, papel toalha, suco de laranja   molho de tomate   0.0007     0.2917  1.58
+                   macarrao, papel toalha, queijo mussarela biscoito recheado   0.0008     0.2286  1.58
+               condicionador, papel higienico, papel toalha            acucar   0.0006     0.4615  1.58
+                                     manteiga, sal, shampoo      agua mineral   0.0006     0.2308  1.58
+                                       carvao, oleo de soja  farinha de trigo   0.0005     0.2174  1.58
+                       desinfetante, macarrao, refrigerante      oleo de soja   0.0005     0.2174  1.57
+              agua mineral, condicionador, farinha de trigo          manteiga   0.0005     0.4167  1.57
+             molho de tomate, papel higienico, refrigerante          manteiga   0.0005     0.4167  1.57
+                 manteiga, molho de tomate, papel higienico      refrigerante   0.0005     0.2174  1.57
+                        arroz, pao de forma, pasta de dente        detergente   0.0005     0.2273  1.56
+                      cafe, leite integral, molho de tomate        detergente   0.0005     0.2273  1.56
+                        papel toalha, sabao em po, sabonete          macarrao   0.0005     0.2273  1.56
+                  papel toalha, pasta de dente, sabao em po          macarrao   0.0005     0.2273  1.56
+                                          amaciante, carvao            acucar   0.0005     0.4545  1.55
+                         acucar, agua mineral, refrigerante        detergente   0.0007     0.2258  1.55
+                          cerveja, detergente, papel toalha  farinha de trigo   0.0006     0.2143  1.55
+                                   cafe, condicionador, sal  farinha de trigo   0.0006     0.2143  1.55
+                     leite integral, papel toalha, sabonete  farinha de trigo   0.0009     0.2143  1.55
+                     acucar, condicionador, papel higienico      papel toalha   0.0006     0.4000  1.55
+                               macarrao, presunto, sabonete  queijo mussarela   0.0005     0.2000  1.55
+                        desinfetante, farinha de trigo, sal      oleo de soja   0.0006     0.2143  1.55
+                    macarrao, molho de tomate, pao de forma              cafe   0.0006     0.4286  1.54
+                       amaciante, manteiga, molho de tomate            acucar   0.0009     0.4500  1.54
+                             feijao, manteiga, oleo de soja        detergente   0.0006     0.2222  1.53
+                                    carvao, molho de tomate      agua mineral   0.0006     0.2222  1.52
+                         cerveja, macarrao, suco de laranja    pasta de dente   0.0005     0.5000  1.52
+                      cafe, condicionador, farinha de trigo               sal   0.0006     0.2143  1.52
+                          acucar, farinha de trigo, shampoo      oleo de soja   0.0005     0.2083  1.51
+                           detergente, feijao, oleo de soja          manteiga   0.0006     0.4000  1.51
+                     detergente, pao de forma, papel toalha   molho de tomate   0.0005     0.2778  1.50
+                                       carvao, oleo de soja biscoito recheado   0.0005     0.2174  1.50
+                        farinha de trigo, papel toalha, sal      refrigerante   0.0005     0.2083  1.50
+                     cerveja, desinfetante, papel higienico            acucar   0.0007     0.4375  1.50
+                  condicionador, papel toalha, refrigerante        detergente   0.0005     0.2174  1.50
+                papel higienico, queijo mussarela, sabonete      papel toalha   0.0005     0.3846  1.49
+                    cafe, papel higienico, queijo mussarela      desinfetante   0.0005     0.3571  1.48
+               biscoito recheado, manteiga, papel higienico              cafe   0.0007     0.4118  1.48
+                   agua mineral, papel toalha, refrigerante biscoito recheado   0.0006     0.2143  1.48
+                   detergente, leite integral, papel toalha          sabonete   0.0006     0.4615  1.48
+                    cerveja, farinha de trigo, papel toalha        detergente   0.0006     0.2143  1.47
+                           cafe, macarrao, queijo mussarela      agua mineral   0.0006     0.2143  1.47
+                     detergente, queijo mussarela, sabonete      agua mineral   0.0006     0.2143  1.47
+               desinfetante, farinha de trigo, oleo de soja               sal   0.0006     0.2069  1.46
+                       macarrao, presunto, queijo mussarela          sabonete   0.0005     0.4545  1.46
+              molho de tomate, pasta de dente, refrigerante biscoito recheado   0.0008     0.2105  1.45
+                                   carvao, farinha de trigo      oleo de soja   0.0005     0.2000  1.45
+                        farinha de trigo, sabonete, shampoo      oleo de soja   0.0005     0.2000  1.45
+                       feijao, oleo de soja, pasta de dente      refrigerante   0.0005     0.2000  1.44
+                     leite integral, manteiga, papel toalha biscoito recheado   0.0005     0.2083  1.44
+                   acucar, molho de tomate, papel higienico biscoito recheado   0.0005     0.2083  1.44
+                  acucar, farinha de trigo, suco de laranja      desinfetante   0.0009     0.3462  1.44
+                   desinfetante, oleo de soja, refrigerante          macarrao   0.0005     0.2083  1.43
+               leite integral, oleo de soja, pasta de dente          macarrao   0.0005     0.2083  1.43
+                       biscoito recheado, pao de forma, sal          sabonete   0.0008     0.4444  1.43
+                       cafe, oleo de soja, queijo mussarela      agua mineral   0.0005     0.2083  1.43
+                         agua mineral, sal, suco de laranja            acucar   0.0005     0.4167  1.43
+                             sabao em po, sabonete, shampoo            acucar   0.0005     0.4167  1.43
+                           cafe, detergente, leite integral   molho de tomate   0.0005     0.2632  1.42
+                               papel higienico, sabao em po        detergente   0.0006     0.2069  1.42
+              agua mineral, pasta de dente, suco de laranja        detergente   0.0006     0.2069  1.42
+                    desinfetante, macarrao, suco de laranja               sal   0.0005     0.2000  1.41
+                           cafe, pao de forma, papel toalha               sal   0.0006     0.2000  1.41
+                         acucar, amaciante, molho de tomate          manteiga   0.0009     0.3750  1.41
+            biscoito recheado, oleo de soja, pasta de dente      agua mineral   0.0007     0.2059  1.41
+                 desinfetante, detergente, farinha de trigo   molho de tomate   0.0007     0.2593  1.40
+                             cafe, detergente, oleo de soja   molho de tomate   0.0007     0.2593  1.40
+           leite integral, pasta de dente, queijo mussarela              cafe   0.0007     0.3889  1.40
+                                  agua mineral, sabao em po        detergente   0.0013     0.2031  1.40
+                                    detergente, sabao em po      agua mineral   0.0013     0.2031  1.39
+                             cafe, cerveja, papel higienico      papel toalha   0.0005     0.3571  1.39
+                        farinha de trigo, refrigerante, sal      papel toalha   0.0005     0.3571  1.39
+                 molho de tomate, presunto, suco de laranja      papel toalha   0.0005     0.3571  1.39
+                       agua mineral, macarrao, refrigerante              cafe   0.0005     0.3846  1.38
+                      condicionador, oleo de soja, presunto              cafe   0.0005     0.3846  1.38
+                            cerveja, macarrao, pao de forma              cafe   0.0005     0.3846  1.38
+                           condicionador, manteiga, shampoo              cafe   0.0005     0.3846  1.38
+                           cerveja, condicionador, manteiga      desinfetante   0.0006     0.3333  1.38
+                        farinha de trigo, oleo de soja, sal      desinfetante   0.0006     0.3333  1.38
+             pasta de dente, queijo mussarela, refrigerante      desinfetante   0.0009     0.3333  1.38
+                      cafe, condicionador, queijo mussarela      desinfetante   0.0009     0.3333  1.38
+              biscoito recheado, pao de forma, papel toalha      desinfetante   0.0007     0.3333  1.38
+               biscoito recheado, desinfetante, sabao em po    pasta de dente   0.0005     0.4545  1.38
+                    oleo de soja, papel higienico, sabonete        detergente   0.0005     0.2000  1.38
+             biscoito recheado, condicionador, desinfetante      papel toalha   0.0006     0.3529  1.37
+               biscoito recheado, molho de tomate, presunto      papel toalha   0.0006     0.3529  1.37
+             farinha de trigo, pao de forma, pasta de dente      agua mineral   0.0005     0.2000  1.37
+                   detergente, oleo de soja, pasta de dente      agua mineral   0.0006     0.2000  1.37
+                          cerveja, desinfetante, detergente      agua mineral   0.0005     0.2000  1.37
+                              agua mineral, arroz, sabonete            acucar   0.0008     0.4000  1.37
+                            cafe, papel toalha, sabao em po            acucar   0.0008     0.4000  1.37
+                            desinfetante, refrigerante, sal          manteiga   0.0009     0.3600  1.35
+       desinfetante, papel toalha, pasta de dente, sabonete   molho de tomate   0.0005     0.2500  1.35
+                           feijao, macarrao, pasta de dente   molho de tomate   0.0005     0.2500  1.35
+                   agua mineral, macarrao, queijo mussarela              cafe   0.0006     0.3750  1.35
+              condicionador, desinfetante, queijo mussarela              cafe   0.0009     0.3750  1.35
+                           acucar, cerveja, papel higienico      papel toalha   0.0009     0.3462  1.34
+desinfetante, molho de tomate, papel toalha, pasta de dente          sabonete   0.0005     0.4167  1.34
+                                manteiga, pao de forma, sal    pasta de dente   0.0007     0.4375  1.33
+                      agua mineral, detergente, sabao em po            acucar   0.0005     0.3846  1.32
+                        pao de forma, papel toalha, shampoo      desinfetante   0.0006     0.3158  1.31
+                  condicionador, papel toalha, refrigerante          manteiga   0.0008     0.3478  1.31
+                       macarrao, oleo de soja, refrigerante      desinfetante   0.0005     0.3125  1.30
+    molho de tomate, papel toalha, pasta de dente, sabonete      desinfetante   0.0005     0.3125  1.30
+                       amaciante, papel higienico, sabonete      desinfetante   0.0005     0.3125  1.30
+                                  acucar, cafe, sabao em po      papel toalha   0.0008     0.3333  1.29
+            biscoito recheado, pao de forma, pasta de dente   molho de tomate   0.0005     0.2381  1.29
+                             amaciante, pasta de dente, sal              cafe   0.0005     0.3571  1.28
+               agua mineral, oleo de soja, queijo mussarela              cafe   0.0005     0.3571  1.28
+                             acucar, condicionador, shampoo              cafe   0.0005     0.3571  1.28
+                 leite integral, papel toalha, refrigerante          sabonete   0.0006     0.4000  1.28
+                     agua mineral, detergente, pao de forma            acucar   0.0006     0.3750  1.28
+                           agua mineral, macarrao, sabonete   molho de tomate   0.0009     0.2368  1.28
+            biscoito recheado, oleo de soja, pasta de dente   molho de tomate   0.0008     0.2353  1.27
+                        amaciante, detergente, papel toalha              cafe   0.0006     0.3529  1.27
+                      leite integral, papel toalha, shampoo    pasta de dente   0.0005     0.4167  1.27
+                            arroz, detergente, pao de forma    pasta de dente   0.0005     0.4167  1.27
+               agua mineral, farinha de trigo, pao de forma    pasta de dente   0.0005     0.4167  1.27
+                         feijao, oleo de soja, refrigerante    pasta de dente   0.0005     0.4167  1.27
+                     leite integral, macarrao, oleo de soja    pasta de dente   0.0005     0.4167  1.27
+                       detergente, pasta de dente, presunto   molho de tomate   0.0007     0.2333  1.26
+                                  amaciante, cafe, sabonete      papel toalha   0.0012     0.3243  1.26
+                                    macarrao, manteiga, sal              cafe   0.0007     0.3500  1.26
+                           cerveja, condicionador, sabonete              cafe   0.0007     0.3500  1.26
+                         molho de tomate, refrigerante, sal          manteiga   0.0005     0.3333  1.25
+               farinha de trigo, macarrao, queijo mussarela          manteiga   0.0005     0.3333  1.25
+                      detergente, molho de tomate, presunto    pasta de dente   0.0007     0.4118  1.25
+                             agua mineral, feijao, sabonete   molho de tomate   0.0006     0.2308  1.25
+                         agua mineral, detergente, manteiga   molho de tomate   0.0006     0.2308  1.25
+                                       agua mineral, carvao   molho de tomate   0.0006     0.2308  1.25
+                        oleo de soja, papel toalha, shampoo      desinfetante   0.0006     0.3000  1.24
+                                          cafe, feijao, sal            acucar   0.0008     0.3636  1.24
+                                           carvao, macarrao            acucar   0.0008     0.3636  1.24
+                        papel toalha, sabao em po, sabonete            acucar   0.0008     0.3636  1.24
+                                  papel toalha, sabao em po            acucar   0.0037     0.3619  1.24
+            biscoito recheado, pasta de dente, refrigerante   molho de tomate   0.0008     0.2286  1.24
+                                   amaciante, cafe, cerveja          sabonete   0.0005     0.3846  1.23
+                  condicionador, farinha de trigo, macarrao          sabonete   0.0005     0.3846  1.23
+                  detergente, oleo de soja, papel higienico          sabonete   0.0005     0.3846  1.23
+                                     amaciante, sabao em po              cafe   0.0012     0.3429  1.23
+             biscoito recheado, condicionador, papel toalha            acucar   0.0009     0.3600  1.23
+                        cerveja, manteiga, queijo mussarela      papel toalha   0.0006     0.3158  1.23
+                    molho de tomate, presunto, refrigerante            acucar   0.0005     0.3571  1.22
+                     leite integral, pao de forma, sabonete            acucar   0.0005     0.3571  1.22
+                             macarrao, sal, suco de laranja      desinfetante   0.0005     0.2941  1.22
+             biscoito recheado, pasta de dente, sabao em po      desinfetante   0.0005     0.2941  1.22
+                          agua mineral, cerveja, detergente      desinfetante   0.0005     0.2941  1.22
+                                       carvao, pao de forma    pasta de dente   0.0006     0.4000  1.21
+                                    acucar, arroz, presunto    pasta de dente   0.0008     0.4000  1.21
+                         agua mineral, detergente, macarrao      papel toalha   0.0005     0.3125  1.21
+              detergente, farinha de trigo, molho de tomate      desinfetante   0.0007     0.2917  1.21
+                            cerveja, manteiga, pao de forma            acucar   0.0006     0.3529  1.21
+                          amaciante, refrigerante, sabonete            acucar   0.0006     0.3529  1.21
+                         detergente, macarrao, refrigerante            acucar   0.0006     0.3529  1.21
+                 farinha de trigo, leite integral, sabonete      papel toalha   0.0009     0.3103  1.20
+                               cafe, macarrao, oleo de soja   molho de tomate   0.0006     0.2222  1.20
+                                   amaciante, manteiga, sal          sabonete   0.0006     0.3750  1.20
+                      agua mineral, feijao, molho de tomate          sabonete   0.0006     0.3750  1.20
+                detergente, leite integral, molho de tomate              cafe   0.0005     0.3333  1.20
+                   farinha de trigo, manteiga, pao de forma              cafe   0.0006     0.3333  1.20
+           agua mineral, biscoito recheado, molho de tomate              cafe   0.0007     0.3333  1.20
+                      biscoito recheado, cafe, pao de forma          manteiga   0.0007     0.3182  1.20
+                         desinfetante, detergente, presunto            acucar   0.0007     0.3500  1.20
+                                acucar, amaciante, manteiga   molho de tomate   0.0009     0.2195  1.19
+                  detergente, papel toalha, suco de laranja    pasta de dente   0.0009     0.3913  1.19
+               biscoito recheado, macarrao, molho de tomate          manteiga   0.0006     0.3158  1.19
+                                      presunto, sabao em po      desinfetante   0.0012     0.2857  1.18
+                             arroz, cerveja, pasta de dente      desinfetante   0.0006     0.2857  1.18
+                     cerveja, papel higienico, papel toalha            acucar   0.0009     0.3462  1.18
+            desinfetante, farinha de trigo, suco de laranja            acucar   0.0009     0.3462  1.18
+                     macarrao, pao de forma, pasta de dente          sabonete   0.0007     0.3684  1.18
+              pao de forma, pasta de dente, suco de laranja      papel toalha   0.0007     0.3043  1.18
+                                     arroz, papel higienico   molho de tomate   0.0015     0.2174  1.18
+                            acucar, condicionador, presunto          manteiga   0.0005     0.3125  1.18
+                   agua mineral, biscoito recheado, cerveja          manteiga   0.0005     0.3125  1.18
+                              cerveja, detergente, presunto    pasta de dente   0.0005     0.3846  1.17
+                                acucar, agua mineral, arroz          sabonete   0.0008     0.3636  1.17
+                 condicionador, detergente, molho de tomate      papel toalha   0.0006     0.3000  1.16
+                      biscoito recheado, manteiga, presunto      papel toalha   0.0006     0.3000  1.16
+                                    cafe, oleo de soja, sal      papel toalha   0.0009     0.3000  1.16
+                                             acucar, carvao    pasta de dente   0.0017     0.3830  1.16
+                               acucar, detergente, presunto      desinfetante   0.0007     0.2800  1.16
+                               cafe, macarrao, pao de forma   molho de tomate   0.0006     0.2143  1.16
+                         desinfetante, detergente, macarrao   molho de tomate   0.0006     0.2143  1.16
+                    condicionador, detergente, papel toalha   molho de tomate   0.0006     0.2143  1.16
+                  biscoito recheado, papel toalha, presunto   molho de tomate   0.0006     0.2143  1.16
+                         condicionador, pasta de dente, sal              cafe   0.0009     0.3214  1.16
+                                  acucar, cerveja, macarrao              cafe   0.0009     0.3214  1.16
+                    agua mineral, macarrao, molho de tomate          sabonete   0.0009     0.3600  1.15
+                                      carvao, condicionador      desinfetante   0.0005     0.2778  1.15
+                        desinfetante, queijo mussarela, sal      papel toalha   0.0008     0.2963  1.15
+                                       carvao, desinfetante   molho de tomate   0.0007     0.2121  1.15
+                                           carvao, sabonete    pasta de dente   0.0017     0.3778  1.15
+            condicionador, molho de tomate, suco de laranja          sabonete   0.0005     0.3571  1.15
+                                           arroz, cafe, sal          manteiga   0.0007     0.3043  1.15
+                               acucar, papel higienico, sal              cafe   0.0007     0.3182  1.14
+                                       arroz, manteiga, sal              cafe   0.0007     0.3182  1.14
+                                papel toalha, presunto, sal              cafe   0.0007     0.3182  1.14
+                    farinha de trigo, papel toalha, shampoo              cafe   0.0007     0.3182  1.14
+                        manteiga, queijo mussarela, shampoo      papel toalha   0.0005     0.2941  1.14
+                                   cerveja, detergente, sal      papel toalha   0.0005     0.2941  1.14
+    desinfetante, molho de tomate, pasta de dente, sabonete      papel toalha   0.0005     0.2941  1.14
+                biscoito recheado, leite integral, manteiga      papel toalha   0.0005     0.2941  1.14
+                     agua mineral, leite integral, sabonete            acucar   0.0005     0.3333  1.14
+                          arroz, pao de forma, papel toalha            acucar   0.0006     0.3333  1.14
+                          amaciante, pao de forma, sabonete            acucar   0.0005     0.3333  1.14
+                                  feijao, papel toalha, sal            acucar   0.0006     0.3333  1.14
+                                      carvao, condicionador            acucar   0.0006     0.3333  1.14
+                     agua mineral, detergente, refrigerante            acucar   0.0007     0.3333  1.14
+                                macarrao, manteiga, shampoo            acucar   0.0007     0.3333  1.14
+                                cerveja, macarrao, manteiga    pasta de dente   0.0006     0.3750  1.14
+                       condicionador, farinha de trigo, sal              cafe   0.0006     0.3158  1.14
+                       biscoito recheado, refrigerante, sal          sabonete   0.0006     0.3529  1.13
+                                 feijao, manteiga, presunto          sabonete   0.0006     0.3529  1.13
+                                   amaciante, sabonete, sal          manteiga   0.0006     0.3000  1.13
+                   farinha de trigo, macarrao, papel toalha   molho de tomate   0.0005     0.2083  1.13
+                   acucar, biscoito recheado, condicionador      papel toalha   0.0009     0.2903  1.13
+          biscoito recheado, farinha de trigo, papel toalha    pasta de dente   0.0010     0.3704  1.12
+                 leite integral, manteiga, queijo mussarela              cafe   0.0005     0.3125  1.12
+                 detergente, queijo mussarela, refrigerante              cafe   0.0005     0.3125  1.12
+                                   arroz, manteiga, shampoo              cafe   0.0005     0.3125  1.12
+                               amaciante, cerveja, sabonete              cafe   0.0005     0.3125  1.12
+                         agua mineral, detergente, macarrao              cafe   0.0005     0.3125  1.12
+                                    leite integral, shampoo          sabonete   0.0020     0.3500  1.12
+         biscoito recheado, pasta de dente, suco de laranja   molho de tomate   0.0006     0.2069  1.12
+                      biscoito recheado, macarrao, manteiga   molho de tomate   0.0006     0.2069  1.12
+             desinfetante, papel higienico, suco de laranja    pasta de dente   0.0007     0.3684  1.12
+                       cafe, condicionador, suco de laranja    pasta de dente   0.0007     0.3684  1.12
+                     cafe, leite integral, queijo mussarela    pasta de dente   0.0007     0.3684  1.12
+              agua mineral, biscoito recheado, oleo de soja    pasta de dente   0.0007     0.3684  1.12
+                           acucar, cerveja, papel higienico      desinfetante   0.0007     0.2692  1.12
+                               acucar, agua mineral, feijao          sabonete   0.0008     0.3478  1.12
+                              acucar, queijo mussarela, sal   molho de tomate   0.0008     0.2051  1.11
+                    manteiga, oleo de soja, suco de laranja          sabonete   0.0009     0.3462  1.11
+                              acucar, macarrao, sabao em po      papel toalha   0.0006     0.2857  1.11
+                                  arroz, macarrao, manteiga      papel toalha   0.0006     0.2857  1.11
+                        agua mineral, cafe, papel higienico      papel toalha   0.0006     0.2857  1.11
+                        presunto, sabonete, suco de laranja      papel toalha   0.0008     0.2857  1.11
+                agua mineral, desinfetante, suco de laranja          manteiga   0.0005     0.2941  1.11
+                detergente, papel higienico, pasta de dente          manteiga   0.0005     0.2941  1.11
+                       arroz, papel toalha, suco de laranja          manteiga   0.0005     0.2941  1.11
+               agua mineral, queijo mussarela, refrigerante          manteiga   0.0005     0.2941  1.11
+                            acucar, amaciante, papel toalha          manteiga   0.0010     0.2941  1.11
+                            arroz, detergente, papel toalha          manteiga   0.0005     0.2941  1.11
+                      pao de forma, pasta de dente, shampoo          manteiga   0.0005     0.2941  1.11
+                     acucar, farinha de trigo, refrigerante      desinfetante   0.0008     0.2667  1.11
+                    macarrao, papel higienico, papel toalha    pasta de dente   0.0008     0.3636  1.10
+           biscoito recheado, molho de tomate, refrigerante    pasta de dente   0.0008     0.3636  1.10
+                macarrao, molho de tomate, queijo mussarela    pasta de dente   0.0008     0.3636  1.10
+                                   cerveja, papel higienico      papel toalha   0.0025     0.2826  1.10
+                  condicionador, desinfetante, oleo de soja            acucar   0.0008     0.3200  1.09
+                  detergente, molho de tomate, oleo de soja              cafe   0.0007     0.3043  1.09
+        biscoito recheado, molho de tomate, papel higienico      desinfetante   0.0005     0.2632  1.09
+                           condicionador, refrigerante, sal      desinfetante   0.0005     0.2632  1.09
+                           acucar, pasta de dente, presunto      desinfetante   0.0015     0.2632  1.09
+                  papel toalha, pasta de dente, sabao em po            acucar   0.0007     0.3182  1.09
+                                 amaciante, papel higienico      desinfetante   0.0016     0.2623  1.09
+        biscoito recheado, molho de tomate, suco de laranja      papel toalha   0.0007     0.2800  1.09
+                                    cafe, sabonete, shampoo      desinfetante   0.0011     0.2619  1.09
+            agua mineral, farinha de trigo, papel higienico    pasta de dente   0.0005     0.3571  1.08
+      desinfetante, molho de tomate, papel toalha, sabonete    pasta de dente   0.0005     0.3571  1.08
+                                           carvao, presunto    pasta de dente   0.0005     0.3571  1.08
+             biscoito recheado, detergente, suco de laranja    pasta de dente   0.0005     0.3571  1.08
+                    manteiga, molho de tomate, pao de forma    pasta de dente   0.0005     0.3571  1.08
+                     desinfetante, papel higienico, shampoo    pasta de dente   0.0005     0.3571  1.08
+                   agua mineral, oleo de soja, refrigerante    pasta de dente   0.0005     0.3571  1.08
+                   condicionador, sabonete, suco de laranja   molho de tomate   0.0005     0.2000  1.08
+                      detergente, manteiga, suco de laranja   molho de tomate   0.0005     0.2000  1.08
+                  condicionador, oleo de soja, papel toalha   molho de tomate   0.0005     0.2000  1.08
+              biscoito recheado, manteiga, queijo mussarela      desinfetante   0.0006     0.2609  1.08
+                       biscoito recheado, manteiga, shampoo            acucar   0.0006     0.3158  1.08
+                        macarrao, papel toalha, sabao em po            acucar   0.0006     0.3158  1.08
+                          acucar, biscoito recheado, feijao              cafe   0.0006     0.3000  1.08
+                          desinfetante, detergente, shampoo              cafe   0.0006     0.3000  1.08
+                 manteiga, papel higienico, suco de laranja              cafe   0.0006     0.3000  1.08
+                     amaciante, biscoito recheado, sabonete      papel toalha   0.0005     0.2778  1.08
+                      macarrao, pasta de dente, sabao em po      papel toalha   0.0005     0.2778  1.08
+                    leite integral, pasta de dente, shampoo      papel toalha   0.0005     0.2778  1.08
+                                   arroz, desinfetante, sal      papel toalha   0.0005     0.2778  1.08
+                             feijao, pao de forma, sabonete      papel toalha   0.0005     0.2778  1.08
+                              acucar, cerveja, pao de forma          manteiga   0.0006     0.2857  1.08
+                   oleo de soja, pao de forma, papel toalha          manteiga   0.0006     0.2857  1.08
+                                 feijao, macarrao, sabonete          manteiga   0.0006     0.2857  1.08
+                       cerveja, condicionador, desinfetante          manteiga   0.0006     0.2857  1.08
+                              desinfetante, detergente, sal          manteiga   0.0006     0.2857  1.08
+                                    carvao, molho de tomate      desinfetante   0.0007     0.2593  1.08
+           papel higienico, pasta de dente, suco de laranja      desinfetante   0.0007     0.2593  1.08
+                       condicionador, papel toalha, shampoo    pasta de dente   0.0006     0.3529  1.07
+             molho de tomate, oleo de soja, suco de laranja    pasta de dente   0.0006     0.3529  1.07
+                     agua mineral, detergente, oleo de soja    pasta de dente   0.0006     0.3529  1.07
+                         detergente, macarrao, refrigerante    pasta de dente   0.0006     0.3529  1.07
+                               arroz, cerveja, desinfetante    pasta de dente   0.0006     0.3529  1.07
+                       acucar, leite integral, pao de forma          sabonete   0.0005     0.3333  1.07
+                     desinfetante, feijao, queijo mussarela          sabonete   0.0005     0.3333  1.07
+                         cafe, leite integral, refrigerante          sabonete   0.0005     0.3333  1.07
+                            acucar, amaciante, refrigerante          sabonete   0.0006     0.3333  1.07
+                        queijo mussarela, refrigerante, sal          sabonete   0.0006     0.3333  1.07
+                       oleo de soja, papel toalha, presunto          sabonete   0.0007     0.3333  1.07
+                          cerveja, pasta de dente, presunto          sabonete   0.0007     0.3333  1.07
+                                  biscoito recheado, carvao          sabonete   0.0007     0.3333  1.07
+                             biscoito recheado, feijao, sal            acucar   0.0005     0.3125  1.07
+                          cafe, condicionador, papel toalha            acucar   0.0010     0.3125  1.07
+                       macarrao, oleo de soja, refrigerante            acucar   0.0005     0.3125  1.07
+                             cafe, farinha de trigo, feijao            acucar   0.0005     0.3125  1.07
+                                         amaciante, cerveja      papel toalha   0.0021     0.2750  1.07
+               agua mineral, desinfetante, queijo mussarela              cafe   0.0008     0.2963  1.07
+                    desinfetante, macarrao, papel higienico    pasta de dente   0.0007     0.3500  1.06
+                                      arroz, leite integral    pasta de dente   0.0015     0.3488  1.06
+                       arroz, desinfetante, molho de tomate      papel toalha   0.0006     0.2727  1.06
+                        desinfetante, pao de forma, shampoo      papel toalha   0.0006     0.2727  1.06
+                                acucar, arroz, pao de forma      papel toalha   0.0006     0.2727  1.06
+                     detergente, manteiga, queijo mussarela              cafe   0.0005     0.2941  1.06
+                             farinha de trigo, sal, shampoo              cafe   0.0005     0.2941  1.06
+                            pao de forma, refrigerante, sal              cafe   0.0005     0.2941  1.06
+                                                      vinho              cafe   0.0010     0.2941  1.06
+           biscoito recheado, molho de tomate, oleo de soja    pasta de dente   0.0008     0.3478  1.06
+                               sabao em po, suco de laranja          manteiga   0.0014     0.2800  1.05
+                              acucar, agua mineral, cerveja          manteiga   0.0007     0.2800  1.05
+                                                     carvao    pasta de dente   0.0059     0.3466  1.05
+                             agua mineral, feijao, sabonete            acucar   0.0008     0.3077  1.05
+                              queijo mussarela, sabao em po            acucar   0.0016     0.3077  1.05
+                    manteiga, refrigerante, suco de laranja              cafe   0.0007     0.2917  1.05
+                                       arroz, cafe, shampoo          manteiga   0.0005     0.2778  1.05
+        farinha de trigo, molho de tomate, queijo mussarela          manteiga   0.0005     0.2778  1.05
+                       cafe, pao de forma, queijo mussarela          manteiga   0.0005     0.2778  1.05
+                                          refrigerante, sal          manteiga   0.0048     0.2768  1.04
+                              amaciante, cafe, papel toalha          sabonete   0.0012     0.3243  1.04
+                                        acucar, sabao em po      papel toalha   0.0037     0.2676  1.04
+                         acucar, macarrao, queijo mussarela      desinfetante   0.0006     0.2500  1.04
+                         feijao, queijo mussarela, sabonete      desinfetante   0.0005     0.2500  1.04
+                                    carvao, suco de laranja      desinfetante   0.0005     0.2500  1.04
+                    agua mineral, manteiga, suco de laranja      desinfetante   0.0005     0.2500  1.04
+         farinha de trigo, molho de tomate, suco de laranja      desinfetante   0.0005     0.2500  1.04
+                      detergente, papel higienico, sabonete      desinfetante   0.0005     0.2500  1.04
+                        amaciante, manteiga, pasta de dente          sabonete   0.0010     0.3226  1.03
+                agua mineral, papel higienico, papel toalha              cafe   0.0006     0.2857  1.03
+                    molho de tomate, refrigerante, sabonete              cafe   0.0010     0.2857  1.03
+                                                      vinho      papel toalha   0.0009     0.2647  1.03
+                            agua mineral, papel toalha, sal          manteiga   0.0006     0.2727  1.03
+                  acucar, queijo mussarela, suco de laranja          manteiga   0.0009     0.2727  1.03
+                manteiga, queijo mussarela, suco de laranja            acucar   0.0009     0.3000  1.03
+                           desinfetante, detergente, feijao      papel toalha   0.0005     0.2632  1.02
+                                 acucar, macarrao, presunto      papel toalha   0.0005     0.2632  1.02
+                                 desinfetante, sal, shampoo      papel toalha   0.0005     0.2632  1.02
+                    condicionador, detergente, refrigerante      papel toalha   0.0005     0.2632  1.02
+                amaciante, farinha de trigo, pasta de dente      papel toalha   0.0005     0.2632  1.02
+                           arroz, manteiga, suco de laranja      papel toalha   0.0005     0.2632  1.02
+                            oleo de soja, refrigerante, sal      papel toalha   0.0005     0.2632  1.02
+                              condicionador, leite integral            acucar   0.0017     0.2982  1.02
+                                       agua mineral, carvao          manteiga   0.0007     0.2692  1.01
+                        cafe, refrigerante, suco de laranja          manteiga   0.0007     0.2692  1.01
+                              detergente, oleo de soja, sal          sabonete   0.0006     0.3158  1.01
+                            oleo de soja, refrigerante, sal          sabonete   0.0006     0.3158  1.01
+                     detergente, farinha de trigo, sabonete    pasta de dente   0.0012     0.3333  1.01
+           condicionador, queijo mussarela, suco de laranja    pasta de dente   0.0005     0.3333  1.01
+                  agua mineral, detergente, suco de laranja    pasta de dente   0.0006     0.3333  1.01
+                                            carvao, cerveja    pasta de dente   0.0006     0.3333  1.01
+                               arroz, papel toalha, shampoo    pasta de dente   0.0005     0.3333  1.01
+                                      carvao, condicionador    pasta de dente   0.0006     0.3333  1.01
+               biscoito recheado, cerveja, queijo mussarela    pasta de dente   0.0005     0.3333  1.01
+                       acucar, amaciante, biscoito recheado    pasta de dente   0.0005     0.3333  1.01
+                       biscoito recheado, desinfetante, sal    pasta de dente   0.0009     0.3333  1.01
+                            cafe, macarrao, papel higienico    pasta de dente   0.0007     0.3333  1.01
+                          arroz, queijo mussarela, sabonete    pasta de dente   0.0008     0.3333  1.01
+                                cafe, cerveja, refrigerante      papel toalha   0.0006     0.2609  1.01
+                  biscoito recheado, manteiga, refrigerante      papel toalha   0.0006     0.2609  1.01
+                      biscoito recheado, cafe, oleo de soja      papel toalha   0.0006     0.2609  1.01
+                                     carvao, pasta de dente            acucar   0.0017     0.2951  1.01
+                                           feijao, presunto      desinfetante   0.0017     0.2432  1.01
+                          acucar, amaciante, pasta de dente          sabonete   0.0011     0.3143  1.01
+                   agua mineral, desinfetante, refrigerante              cafe   0.0007     0.2800  1.01
+                                   carvao, farinha de trigo              cafe   0.0007     0.2800  1.01
+                         arroz, biscoito recheado, sabonete      papel toalha   0.0007     0.2593  1.01
+               condicionador, molho de tomate, refrigerante            acucar   0.0005     0.2941  1.01
+                    amaciante, pasta de dente, refrigerante            acucar   0.0005     0.2941  1.01
+               biscoito recheado, manteiga, papel higienico            acucar   0.0005     0.2941  1.01
+                   agua mineral, oleo de soja, papel toalha            acucar   0.0005     0.2941  1.01
+                          amaciante, manteiga, papel toalha            acucar   0.0010     0.2941  1.01
+                                                      vinho            acucar   0.0010     0.2941  1.01
+                                        amaciante, sabonete      papel toalha   0.0055     0.2591  1.01
+                       agua mineral, cafe, queijo mussarela      desinfetante   0.0008     0.2424  1.01
+                        acucar, condicionador, oleo de soja      desinfetante   0.0008     0.2424  1.01
+                                      pao de forma, shampoo      desinfetante   0.0021     0.2418  1.00
+                       macarrao, oleo de soja, refrigerante          sabonete   0.0005     0.3125  1.00
+                                    detergente, sabao em po          sabonete   0.0019     0.3125  1.00
+                       acucar, agua mineral, leite integral          sabonete   0.0005     0.3125  1.00
+                 amaciante, biscoito recheado, papel toalha          sabonete   0.0005     0.3125  1.00
+                              cerveja, desinfetante, feijao          sabonete   0.0005     0.3125  1.00
+                   amaciante, desinfetante, papel higienico          sabonete   0.0005     0.3125  1.00
+            agua mineral, molho de tomate, queijo mussarela          sabonete   0.0005     0.3125  1.00
+                       detergente, leite integral, manteiga          sabonete   0.0005     0.3125  1.00
+                  macarrao, papel higienico, pasta de dente      papel toalha   0.0008     0.2581  1.00
+                  biscoito recheado, manteiga, oleo de soja      desinfetante   0.0007     0.2414  1.00

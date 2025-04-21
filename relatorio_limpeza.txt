@@ -1,0 +1,45 @@
+
+# Relatório de Limpeza de Dados
+
+✔️ Colunas padronizadas: ['id_da_compra', 'data', 'hora', 'cliente', 'produto', 'valor', 'quantidade', 'total', 'status', 'cidade', 'estado', 'cep', 'frete', 'pagamento', 'vendedor', 'marca']
+   → Renomeadas com nomes consistentes, sem acentos/símbolos, para padronização e acesso facilitado.
+
+✔️ Linhas iniciais: 368752
+✔️ Linhas finais: 51439
+✔️ Linhas removidas: 317313
+✔️ Colunas finais: 16
+
+✔️ Ferramentas utilizadas: pandas, numpy, regex, unicodedata
+
+✔️ Texto limpo (sem acentos, símbolos, espaços extras)
+   → Garantia de consistência para análise, evitando ruídos no processamento.
+
+✔️ Produtos e marcas padronizados
+   → Redução de variações como “Celular”, “celular ”, “CELULAR”, etc., para uma única categoria.
+
+✔️ Nomes de cliente/vendedor com inicial maiúscula
+   → Padronização visual e leitura mais amigável.
+
+✔️ Status e forma de pagamento normalizados
+   → Valores inconsistentes (ex: “aprovado”, “Aprovado”) foram unificados.
+
+✔️ CEPs validados e formatados
+   → Apenas CEPs válidos foram mantidos no padrão 00000-000.
+
+✔️ Valores monetários convertidos e arredondados
+   → Garantia que valores fossem tratados como numéricos e uniformes.
+
+✔️ Datas verificadas + hora convertida
+   → Campos de data/hora foram transformados para formato padrão e validados.
+
+✔️ Campos derivados: ano_venda, mes_venda
+   → Criado para facilitar análises temporais (ex: vendas por mês/ano).
+
+✔️ Colunas com nulos > 50% removidas
+   → Remoção de colunas com muitos valores ausentes que comprometem a análise.
+
+✔️ Duplicatas eliminadas por id_da_compra
+   → Mantido apenas o registro original para evitar distorções nas métricas.
+
+✔️ Outliers removidos
+   → Valores muito fora do padrão foram filtrados com base estatística para maior confiabilidade.
