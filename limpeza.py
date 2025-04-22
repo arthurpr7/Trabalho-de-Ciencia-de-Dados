@@ -167,6 +167,31 @@ for col in df.select_dtypes(include=[np.number]):
     df = df[remover_outliers(df[col])]
 
 # =========================
+# Renomear colunas para maiúsculas (aplicado no final)
+# =========================
+mapa_colunas_maiusculas = {
+    'id_da_compra': 'Id_da_compra',
+    'data': 'Data',
+    'hora': 'Hora',
+    'cliente': 'Cliente',
+    'produto': 'Produto',
+    'valor': 'Valor',
+    'quantidade': 'Quantidade',
+    'total': 'Total',
+    'status': 'Status',
+    'cidade': 'Cidade',
+    'estado': 'Estado',
+    'pais': 'Pais',
+    'cep': 'Cep',
+    'frete': 'Frete',
+    'pagamento': 'Pagamento',
+    'vendedor': 'Vendedor',
+    'marca': 'Marca'
+}
+
+df.rename(columns=mapa_colunas_maiusculas, inplace=True)
+
+# =========================
 # 4. Exportar
 # =========================
 caminho_saida = os.path.join(os.path.dirname(caminho_arquivo), 'vendas_limpo.csv')
@@ -176,20 +201,17 @@ print(f"Arquivo limpo salvo em: {caminho_saida}")
 # =========================
 # 5. Relatório
 # =========================
-# Último dataframe tratado
 df_final = df.copy()
 
-# Salva arquivo final
 df_final.to_csv("vendas_limpo.csv", index=False)
 
-# Relatório
 linhas_finais = len(df_final)
 colunas_finais = df_final.columns.tolist()
 
 relatorio = f"""
 # Relatório de Limpeza de Dados
 
-✔️ Colunas padronizadas: {[c for c in colunas_iniciais if padronizar_coluna(c) in colunas_finais]}
+✔️ Colunas padronizadas: {[c for c in colunas_iniciais if padronizar_coluna(c) in df_final.columns.str.lower().tolist()]}
    → Renomeadas com nomes consistentes, sem acentos/símbolos, para padronização e acesso facilitado.
 
 ✔️ Linhas iniciais: {linhas_iniciais}
@@ -232,7 +254,6 @@ relatorio = f"""
 ✔️ Outliers removidos
    → Valores muito fora do padrão foram filtrados com base estatística para maior confiabilidade.
 """
-
 
 print(relatorio)
 
