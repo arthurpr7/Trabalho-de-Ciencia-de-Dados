@@ -28,12 +28,12 @@ print(df.head(5))
 print(f"\n[{df.head(5).shape[0]} rows x {df.head(5).shape[1]} columns]\n")
 
 # Remove produtos com baixa frequência
-frequencia = df["produto"].value_counts()
+frequencia = df["Produto"].value_counts()
 produtos_validos = frequencia[frequencia >= FREQUENCIA_MINIMA_PRODUTO].index
-df = df[df["produto"].isin(produtos_validos)]
+df = df[df["Produto"].isin(produtos_validos)]
 
 # Agrupa por ID
-agrupado = df.groupby("id_da_compra")["produto"].apply(list)
+agrupado = df.groupby("Id_da_compra")["Produto"].apply(list)
 transacoes_multiplos = agrupado[agrupado.apply(lambda x: len(set(x)) > 1)]
 
 print(f" Transações com múltiplos produtos: {len(transacoes_multiplos)}")
@@ -42,8 +42,8 @@ print(f" Transações com múltiplos produtos: {len(transacoes_multiplos)}")
 if len(transacoes_multiplos) == 0:
     print(" Simulando transações com múltiplos produtos...")
     df_simulado = df.sample(frac=1).copy()
-    df_simulado["id_simulado"] = (df_simulado.index // 5) + 1
-    transacoes_multiplos = df_simulado.groupby("id_simulado")["produto"].apply(list)
+    df_simulado["Id_Simulado"] = (df_simulado.index // 5) + 1
+    transacoes_multiplos = df_simulado.groupby("Id_Simulado")["Produto"].apply(list)
     print(f" Transações simuladas: {len(transacoes_multiplos)}")
 
 # Transforma para binário
@@ -96,9 +96,9 @@ plt.tight_layout()
 plt.show()
 
 # Ranking de produtos
-if 'produto' in df.columns:
-    ranking_produtos = df['produto'].value_counts().reset_index()
-    ranking_produtos.columns = ['produto', 'quantidade_vendida']
+if 'Produto' in df.columns:
+    ranking_produtos = df['Produto'].value_counts().reset_index()
+    ranking_produtos.columns = ['Produto', 'Quantidade_Vendida']
 
     print("\n" + "=" * 50)
     print(" Top 10 Produtos Mais Vendidos")
@@ -108,7 +108,7 @@ if 'produto' in df.columns:
     # Gráfico do ranking
     top10 = ranking_produtos.head(10)
     plt.figure(figsize=(10, 6))
-    plt.barh(top10['produto'][::-1], top10['quantidade_vendida'][::-1], color='skyblue')
+    plt.barh(top10['Produto'][::-1], top10['Quantidade_Vendida'][::-1], color='skyblue')
     plt.title(' Top 10 Produtos Mais Vendidos')
     plt.xlabel('Quantidade Vendida')
     plt.ylabel('Produto')
